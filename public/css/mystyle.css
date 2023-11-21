@@ -1,0 +1,47 @@
+body {
+    background-color: lightcyan;
+    color: olive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hargafinal {
+    font-weight: bold;
+    color: brown;
+}
+
+a:link {
+    text-decoration: none;
+    color: green;
+}
+
+a:visited {
+    text-decoration: none;
+    color: green;
+}
+
+a:hover {
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+}
+
+.profilepicture {
+    border-radius: 50%;
+}
+
+.photoframe {
+    /* membuat rounded corner */
+    border-radius: 25px;
+
+    /* tebal jenis warna */
+    border: 2px solid darkgrey;
+
+    /* jarak isi dengan border */
+    padding: 10px;
+
+    /* jika tidak diset, akan full 1 halaman */
+    width: 280px;
+
+    margin-right: auto;
+    margin-left: auto;
+}
