@@ -19,8 +19,8 @@
                 <td>{{ $kb->ID }}</td>
                 <td>{{ $kb->KodeBarang }}</td>
                 <td>{{ $kb->Jumlah }}</td>
-                <td>{{ $kb->Harga }}</td>
-                <td>{{ $kb->Jumlah * $kb->Harga }}</td>
+                <td>{{ number_format($kb->Harga, 0, ',', '.') }}</td>
+                <td>{{ number_format($kb->Harga * $kb->Jumlah, 0, ',', '.') }}</td>
                 <td>
                     <a href="/keranjangbelanja/batal/{{ $kb->ID }}" class="btn btn-danger">Batal</a>
                 </td>

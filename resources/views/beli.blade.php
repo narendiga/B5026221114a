@@ -1,7 +1,5 @@
 @extends('master')
-
 @section('title', 'Data Pegawai')
-
 @section('konten')
     <h3>Tambahkan Produk</h3>
 
@@ -36,7 +34,7 @@
             <label for = "harga" class = "col-sm-2 control-label">Harga</label>
 
             <div class = "col-sm-10">
-                <input name="harga" class = "form-control" id = "harga" placeholder = "Masukkan Harga">
+                <input name="harga" type = "number" class = "form-control" id = "harga" placeholder = "Masukkan Harga">
             </div>
 
         </div>

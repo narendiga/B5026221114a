@@ -75,21 +75,32 @@ Route::get('showjam/{jam}', 'App\Http\Controllers\DosenController@showjam');
 Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
 
+// tabel pegawai
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
 Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController@tambah');
 Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
 Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
-
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
-
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
+// tabel keranjangbelanja
 Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangController@indexd4');
 Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangController@beli');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
 
+// tabel nilaikuliah
 Route::get('/nilaikuliah','App\Http\Controllers\NilaiController@nilai');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiController@store');
 Route::get('/nilaikuliah/nilaitambah','App\Http\Controllers\NilaiController@nilaitambah');
+
+// tabel tumbuhan
+Route::get('/tumbuhan','App\Http\Controllers\TumbuhanController@indext');
+Route::get('/tumbuhan/create','App\Http\Controllers\TumbuhanController@create');
+Route::post('/tumbuhan/store','App\Http\Controllers\TumbuhanController@store');
+Route::get('/tumbuhan/editt/{kodetumbuhan}','App\Http\Controllers\TumbuhanController@editt');
+Route::post('/tumbuhan/update','App\Http\Controllers\TumbuhanController@update');
+Route::get('/tumbuhan/delete/{kodetumbuhan}','App\Http\Controllers\TumbuhanController@delete');
+Route::get('/tumbuhan/cari','App\Http\Controllers\TumbuhanController@cari');
+Route::get('/tumbuhan/viewt/{kodetumbuhan}','App\Http\Controllers\TumbuhanController@viewt');
