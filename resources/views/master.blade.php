@@ -41,6 +41,12 @@
     </nav>
     <br>
 
+    <div class="container-fluid">
+        <script>
+            function gagal() {
+                alert("Maaf, Kode Pegawai yang Anda masukkan sudah ada. Silahkan gunakan Kode Pegawai lain.");            }
+        </script>
+
     <div class="container">
         @yield('konten')
     </div>

@@ -104,3 +104,14 @@ Route::post('/tumbuhan/update','App\Http\Controllers\TumbuhanController@update')
 Route::get('/tumbuhan/delete/{kodetumbuhan}','App\Http\Controllers\TumbuhanController@delete');
 Route::get('/tumbuhan/cari','App\Http\Controllers\TumbuhanController@cari');
 Route::get('/tumbuhan/viewt/{kodetumbuhan}','App\Http\Controllers\TumbuhanController@viewt');
+
+// tabel counter
+Route::get('/counter','App\Http\Controllers\CounterController@indexx1');
+
+// tabel karyawan
+Route::get('/karyawan','App\Http\Controllers\KaryawanController@indexdd');
+Route::get('/karyawan/tambahk','App\Http\Controllers\KaryawanController@tambahk');
+Route::post('/karyawan/store','App\Http\Controllers\KaryawanController@store');
+Route::post('/karyawan/update','App\Http\Controllers\KaryawanController@update');
+Route::get('/karyawan/hapus/{kodepegawai}','App\Http\Controllers\KaryawanController@hapus');
+Route::post('/karyawan/gagal','App\Http\Controllers\KaryawanController@gagal');
