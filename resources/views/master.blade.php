@@ -20,32 +20,38 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
+                <a class="nav-link" href="/karyawan">Karyawan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 2</a>
+                <a class="nav-link" href="/karyawan">Karyawan</a>
             </li>
 
             <!-- Dropdown -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Dropdown link
+                    Karyawan
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Link 1</a>
-                    <a class="dropdown-item" href="#">Link 2</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
+                    <a class="dropdown-item" href="/karyawan">Karyawan</a>
+                    <a class="dropdown-item" href="/karyawan">Karyawan</a>
+                    <a class="dropdown-item" href="/karyawan">Karyawan</a>
                 </div>
             </li>
         </ul>
     </nav>
     <br>
 
-    <div class="container-fluid">
-        <script>
-            function gagal() {
-                alert("Maaf, Kode Pegawai yang Anda masukkan sudah ada. Silahkan gunakan Kode Pegawai lain.");            }
-        </script>
+    @if (session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
+
+    @if (session()->has('error'))
+        <div class="alert alert-danger">
+            {{ session()->get('error') }}
+            </div>
+    @endif
 
     <div class="container">
         @yield('konten')

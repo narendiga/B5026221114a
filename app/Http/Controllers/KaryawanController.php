@@ -22,6 +22,13 @@ class KaryawanController extends Controller
 
 	public function store(Request $request)
 	{
+
+        $existing = DB::table('karyawan')->where('kodepegawai', $request->kodepegawai)->first();
+
+        if ($existing) {
+            return redirect('/karyawan/tambahk')->with('error', 'Maaf, Kode Pegawai yang Anda masukkan sudah ada. Silahkan gunakan Kode Pegawai lain.');
+        }
+
 		DB::table('karyawan')->insert([
 			'kodepegawai' => $request->kodepegawai,
 			'namalengkap' => $request->namalengkap,
